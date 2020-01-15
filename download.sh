@@ -22,7 +22,7 @@ fshare_download() {
   local green="\033[0;32m"
   local nc="\e[0m"
   printf "${green}- This script is deprecated! Please see link below for better version${nc}\n"
-  printf "${green}https://github.com/duythongle/fshare2gdrive/blob/master/README.md${nc}\n"
+  printf "${green}https://github.com/tungtran96/fshare/blob/master/README.md${nc}\n"
   local download_file_name=$(echo $extracted_download_url | gawk 'match($0, /.+\/(.+?)$/, group) {print group[1]}')
   if [ "$extracted_download_url" != "" ]; then
     printf "${green}- ${fshare_file_url} - Found VIP download link${nc}\n"
