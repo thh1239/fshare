@@ -112,7 +112,7 @@ async function checkLogin(show_log = true){
 			console.error(RED, 'No login credentials found!!!')
 			await login() // login and save creds file
 		}	else { // if creds file exists
-			if (show_log) console.error(GREEN, `Found saved credentials at ${creds_path}. Autostart logging in FShare...`)
+			if (show_log) console.error(GREEN, `Found saved credentials at local. Autostart logging in FShare...`)
 			creds = JSON.parse(await readFileAsync(creds_path))
 			let options = {
 				'method': 'GET',
