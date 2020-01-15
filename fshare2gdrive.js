@@ -236,7 +236,7 @@ async function genCmd(fshare_folder, remote_drive, remote_path, page=1, is_root_
 (async () => {
 	try {
 		if (args === undefined) {
-			throw new Error('Invalid arguments!\nPlease input valid arguments. See https://github.com/duythongle/fshare2gdrive#usage for more details')
+			throw new Error('Invalid arguments!\nPlease input valid arguments. See https://github.com/tungtran96/fshare/#usage for more details')
 		}
 	} catch (e) {
 		console.error(RED, e)
