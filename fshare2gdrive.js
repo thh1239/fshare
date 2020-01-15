@@ -128,7 +128,7 @@ async function checkLogin(show_log = true){
 				// relogin with saved email/pword and overwrite creds file
 				await login(creds.user_email, creds.password)
 			}	else { // if creds still working, finally return
-				if (show_log) console.error(CYAN, `Welcome ${body.email}. Your account is ${body.account_type} (expire at ${new Date(parseInt(body.expire_vip) * 1000)})`)
+				if (show_log) console.error(CYAN, `Welcome Admin. Your account is ${body.account_type} (expire at ${new Date(parseInt(body.expire_vip) * 1000)})`)
 				return
 			}
 		}
