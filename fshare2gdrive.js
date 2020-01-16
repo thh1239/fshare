@@ -124,7 +124,7 @@ async function checkLogin(show_log = true){
 			let body = await request(options) // check user profile
 			if (body.code === 201) { // if creds expired, relogin
 				console.error(RED, `Login Failed!!!`)
-				console.error(GREEN, `Trying to relogin with user email ${creds.user_email}...`)
+				console.error(GREEN, `Trying to relogin with vip account...`)
 				// relogin with saved email/pword and overwrite creds file
 				await login(creds.user_email, creds.password)
 			}	else { // if creds still working, finally return
