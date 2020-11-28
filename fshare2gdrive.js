@@ -112,11 +112,11 @@ async function checkLogin(show_log = true){
 			console.error(RED, 'No login credentials found!!!')
 			await login() // login and save creds file
 		}	else { // if creds file exists
-			if (show_log) console.error(GREEN, `Autostart logging in FShare...`)
+			if (show_log) console.error(GREEN, `Found saved credentials at ${creds_path}. Autostart logging in FShare...`)
 			creds = JSON.parse(await readFileAsync(creds_path))
 			let options = {
 				'method': 'GET',
-				'hostname': 'api2.fshare.vn',
+				'hostname': 'api.fshare.vn',
 				'port': 443,
 				'path': FSHARE_GET_USER_PATH,
 				'headers': {'Cookie': `session_id=${creds.session_id}`}
@@ -154,7 +154,7 @@ async function login(username, password) {
 		}
 		let options = {
 			'method': 'POST',
-			'hostname': 'api2.fshare.vn',
+			'hostname': 'api.fshare.vn',
 			'port': 443,
 			'path': FSHARE_LOGIN_PATH,
 			'headers': {}
@@ -176,7 +176,7 @@ async function transfer(fshare_file, remote_drive, remote_path) {
 	// let fshare_folder = args[0].match(/http\s*:.+?\/folder\/\w+/)[0]
 	let options = {
 		'method': 'POST',
-		'hostname': 'api2.fshare.vn',
+		'hostname': 'api.fshare.vn',
 		'port': 443,
 		'path': FSHARE_DOWNLOAD_PATH,
 		'headers': {'Cookie': `session_id=${creds.session_id}`}
