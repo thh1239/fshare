@@ -70,7 +70,7 @@ E.g:
 # the command below will download "https://www.fshare.vn/file/XXXXXXXXXXX"
 # and pipe upload to "rclone rcat gdrive-remote:/RClone Upload/"
 curl -sS https://raw.githubusercontent.com/tungtran96/fshare/master/fshare2gdrive.js | \
-tail -n+2 | node - "https://www.fshare.vn/file/XXXXXXXXXXX" "gdrive-remote" "/RClone Upload/"
+tail -n+2 | node - "https://www.fshare.vn/file/XXXXXXXXXXX" "fshare" "/Fshare/"
 ```
 
 3. Download whole FShare FOLDER to GDrive SYNCHRONOUSLY (one by one file) ***RECOMMENDED way***
@@ -94,7 +94,7 @@ E.g:
 # Generate single file download commands list and run one by one
 curl -sS https://raw.githubusercontent.com/tungtran96/fshare/master/fshare2gdrive.js | \
 tail -n+2 | node - \
-"https://www.fshare.vn/folder/XXXXXXXXXXX" "gdrive-remote" "/RClone Upload/" | bash -s
+"https://www.fshare.vn/folder/XXXXXXXXXXX" "fshare" "/Fshare/" | bash -s
 
 ```
 
